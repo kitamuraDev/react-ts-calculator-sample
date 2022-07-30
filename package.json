@@ -1,6 +1,5 @@
 {
-  "name": "vite-react-ts-starter",
-  "description": "React Typescript Starter Template with Vite",
+  "name": "react-ts-calculator-sample",
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
