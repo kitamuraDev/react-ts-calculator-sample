@@ -1,3 +1,5 @@
+import Calculator from './domain/calculator';
+
 const App = () => (
   <div
     style={{
@@ -10,7 +12,7 @@ const App = () => (
       fontSize: 'calc(10px + 2vmin)',
     }}
   >
-    <p>Hello, React + TypeScript project Build with Vite.</p>
+    <Calculator />
   </div>
 );
 
