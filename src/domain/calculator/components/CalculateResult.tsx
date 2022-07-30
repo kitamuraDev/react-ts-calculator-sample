@@ -1,5 +1,5 @@
 import { FC, memo } from 'react';
 
-const CalculateResult: FC = memo(() => <div>foo</div>);
+const CalculateResult: FC<{ value: string }> = memo((props) => <div>{props.value}</div>);
 
 export default CalculateResult;
