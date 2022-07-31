@@ -3,6 +3,7 @@ import { FC, memo, useState } from 'react';
 
 import CalculateButton from './components/CalculateButton';
 import CalculateResult from './components/CalculateResult';
+import { ButtonCode, CalcState } from './types';
 import {
   isAllClearButton,
   isDeleteButton,
@@ -19,15 +20,7 @@ import {
   handleAllClearButton,
   handleEqualButton,
 } from './utils/handleChangeState';
-
 import './calculator.scss';
-
-export interface CalcState {
-  current: string;
-  operand: number;
-  operator: string | null;
-  isNextClear: boolean;
-}
 
 export const operate = (state: CalcState): number => {
   const current = parseFloat(state.current);
@@ -51,7 +44,7 @@ const Calculator: FC = memo(() => {
     isNextClear: false,
   });
 
-  const calculate = (button: string, state: CalcState): CalcState => {
+  const calculate = (button: ButtonCode, state: CalcState): CalcState => {
     // 数値かどうか
     if (isNumberButton(button)) {
       return handleNumberButton(button, state);
@@ -84,7 +77,8 @@ const Calculator: FC = memo(() => {
 
     return state;
   };
-  const handleCode = (code: string) => {
+
+  const handleCode = (code: ButtonCode) => {
     const nextState = calculate(code, calcState);
     setCalcState(nextState);
   };

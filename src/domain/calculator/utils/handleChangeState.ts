@@ -1,7 +1,8 @@
 /* eslint-disable import/no-cycle */
-import { CalcState, operate } from '..';
+import { operate } from '..';
+import { CalcState, NumberCode, Operator } from '../types';
 
-export const handleNumberButton = (button: string, state: CalcState): CalcState => {
+export const handleNumberButton = (button: NumberCode, state: CalcState): CalcState => {
   if (state.isNextClear) {
     return {
       current: button,
@@ -28,7 +29,7 @@ export const handleNumberButton = (button: string, state: CalcState): CalcState 
   };
 };
 
-export const handleOperatorButton = (button: string, state: CalcState): CalcState => {
+export const handleOperatorButton = (button: Operator, state: CalcState): CalcState => {
   if (state.operator === null) {
     return {
       current: state.current,

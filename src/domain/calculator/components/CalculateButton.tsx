@@ -1,7 +1,9 @@
 import { FC, memo } from 'react';
 
+import { ButtonCode } from '../types';
+
 type Props = {
-  handleCode: (code: string) => void;
+  handleCode: (code: ButtonCode) => void;
 };
 
 const CalculateButton: FC<Props> = memo((props) => (

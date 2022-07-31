@@ -1,4 +1,6 @@
-export const isNumberButton = (button: string) =>
+import { NumberCode, Operator } from '../types';
+
+export const isNumberButton = (button: string): button is NumberCode =>
   button === '0' ||
   button === '1' ||
   button === '2' ||
@@ -10,7 +12,7 @@ export const isNumberButton = (button: string) =>
   button === '8' ||
   button === '9';
 
-export const isOperatorButton = (button: string) => button === '+' || button === '-';
+export const isOperatorButton = (button: string): button is Operator => button === '+' || button === '-';
 
 export const isDotButton = (button: string) => button === '.';
 
