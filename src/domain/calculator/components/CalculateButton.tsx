@@ -5,7 +5,7 @@ type Props = {
 };
 
 const CalculateButton: FC<Props> = memo((props) => (
-  <>
+  <div className='calculate_button'>
     <div>
       <button type='button' onClick={() => props.handleCode('7')}>
         7
@@ -62,7 +62,7 @@ const CalculateButton: FC<Props> = memo((props) => (
         =
       </button>
     </div>
-  </>
+  </div>
 ));
 
 export default CalculateButton;

@@ -20,6 +20,8 @@ import {
   handleEqualButton,
 } from './utils/handleChangeState';
 
+import './calculator.scss';
+
 export interface CalcState {
   current: string;
   operand: number;
